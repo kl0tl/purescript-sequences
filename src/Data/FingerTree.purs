@@ -63,6 +63,8 @@ import Data.Sequence.Internal (class Measured, (<$$$>), measure)
 
 data Node v a = Node2 v a a | Node3 v a a a
 
+type role Node nominal representational
+
 instance showNode :: (Show a, Show v) => Show (Node v a) where
   show (Node2 v a b) =
     ("Node2 (" <> show v
